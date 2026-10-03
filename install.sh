@@ -66,8 +66,10 @@ case "$CMD" in
     BIN="$(download_release)"
     trap 'rm -f "$BIN"' EXIT
     install -m 0755 "$BIN" "$INSTALLED"
+    ln -sfn "$INSTALLED" /usr/local/bin/3xnode
     systemctl restart 3xfactor-node
     echo "3xFactor node updated. The pairing was not changed."
+    echo "Menu: 3xnode"
     ;;
   *)
     echo "Unknown command: $CMD (install | update)" >&2
