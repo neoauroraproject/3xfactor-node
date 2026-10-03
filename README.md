@@ -8,4 +8,4 @@ bash <(curl -fsSL https://raw.githubusercontent.com/neoauroraproject/3xfactor-no
 
 `PAIR_CODE='XFNODE...'` skips the prompt. Running it again re-pairs without removing the Xray patch. `update` replaces the agent binary and keeps the pairing.
 
-The master panel must be able to reach port `28452` on this server.
+The master panel must be able to reach port `28452` on this server over plain HTTP. The bearer token is the only check.
